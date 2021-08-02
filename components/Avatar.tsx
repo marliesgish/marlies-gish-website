@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-const Avatar = () => {
+interface Props {}
+
+const Avatar: React.FC<Props> = () => {
   return (
     <div className="avatar">
       <Image

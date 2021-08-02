@@ -1,7 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const H1 = ({ children, style = {} }) => (
+interface Props {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+const H1: React.FC<Props> = ({ children, style = {} }) => (
   <h1 style={style}>
     {children}
     <style jsx>{`
@@ -14,13 +18,5 @@ const H1 = ({ children, style = {} }) => (
     `}</style>
   </h1>
 );
-
-H1.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-H1.defaultProps = {
-  siteTitle: ``,
-};
 
 export default H1;

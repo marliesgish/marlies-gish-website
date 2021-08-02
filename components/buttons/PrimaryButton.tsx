@@ -2,7 +2,13 @@ import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
 
-const PrimaryButton = ({ href, children, type = "dark" }) => {
+interface Props {
+  href: string;
+  children?: React.ReactNode;
+  type: "dark" | "light";
+}
+
+const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
   return (
     <Link href={href} passHref>
       <a

@@ -1,13 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Link from "next/link";
 import { formatPostDate } from "../helpers/helpers";
 
-const PostPreview = ({ slug, title, excerpt, date }) => (
+interface Props {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+}
+
+const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
   <article className="article">
     <h3>
-      <Link className="postTitle" href="/" rel="bookmark">
-        title
+      <Link href="/" passHref>
+        <a className="post-title">title</a>
       </Link>
     </h3>
     <p
@@ -24,11 +30,8 @@ const PostPreview = ({ slug, title, excerpt, date }) => (
         margin-top: 50px;
       }
 
-      .postTitle {
+      .post-title {
         color: rgba(0, 0, 0, 0.8);
-        /* font-size: 24px; */
-        /* box-shadow: 0 2px 0 0 currentColor; */
-        /* font-weight: 500; */
       }
 
       .date {
@@ -38,13 +41,5 @@ const PostPreview = ({ slug, title, excerpt, date }) => (
     `}</style>
   </article>
 );
-
-PostPreview.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-PostPreview.defaultProps = {
-  siteTitle: ``,
-};
 
 export default PostPreview;

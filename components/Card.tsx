@@ -1,7 +1,13 @@
 import React from "react";
 import ConstraintWidth from "./layout/ConstraintWidth";
 
-const Card = ({ children }) => {
+interface Props {
+  href: string;
+  children?: React.ReactNode;
+  type: "dark" | "light";
+}
+
+const Card: React.FC<Props> = ({ children }) => {
   return (
     <div className="card-wrapper">
       <div className="card">

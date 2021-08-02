@@ -1,6 +1,10 @@
 import React from "react";
 
-const Paragraph = ({ children }) => (
+interface Props {
+  children?: React.ReactNode;
+}
+
+const Paragraph: React.FC<Props> = ({ children }) => (
   <p>
     {children}
     <style jsx>{`

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Link from "next/link";
 
 import Avatar from "./Avatar";
@@ -9,7 +8,9 @@ import SidePadding from "./SidePadding";
 import ConstraintWidth from "./layout/ConstraintWidth";
 import PrimaryButton from "./buttons/PrimaryButton";
 
-const Header = () => (
+interface Props {}
+
+const Header: React.FC<Props> = () => (
   <header className="header">
     <SidePadding>
       <ConstraintWidth maxWidth={820}>
@@ -22,16 +23,11 @@ const Header = () => (
           }}
         >
           <div style={{ position: "relative" }}>
-            <Link
-              href="/"
-              passHref
-              style={{
-                color: "#fff",
-                textDecoration: `none`,
-              }}
-            >
-              <div
+            <Link href="/" passHref>
+              <a
                 style={{
+                  color: "#fff",
+                  textDecoration: `none`,
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
@@ -50,7 +46,7 @@ const Header = () => (
                 >
                   <div className="title">Marlies Gish</div>
                 </div>
-              </div>
+              </a>
             </Link>
           </div>
           <nav>

@@ -1,6 +1,11 @@
 import React from "react";
 
-const H2 = ({ children, style = {} }) => (
+interface Props {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+const H2: React.FC<Props> = ({ children, style = {} }) => (
   <h2 style={style}>
     {children}
     <style jsx>{`

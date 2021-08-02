@@ -7,9 +7,9 @@ import PostPreview from "../components/PostPreview";
 import SidePadding from "../components/SidePadding";
 import H2 from "../components/type/H2";
 import Paragraph from "../components/type/Paragraph";
-import theme from "./../styles/theme";
+import theme from "../styles/theme";
 
-export default function Home() {
+const Home: React.FC = () => {
   const posts = [];
   return (
     <div className="container">
@@ -28,8 +28,9 @@ export default function Home() {
               />
             </ConstraintWidth>
             <Paragraph>
-              Welcome to my journey in becoming an experienced Data Scientist. In 2018 I completed my research
-              Master in Psychology where I discovered the fun in exploring, analyzing and predicting data.
+              Welcome to my journey in becoming an experienced Data Scientist.
+              In 2018 I completed my research Master in Psychology where I
+              discovered the fun in exploring, analyzing and predicting data.
               The journey really started mid 2019 when my curiosity led me to
               learning Python, SQL and Power BI.
             </Paragraph>
@@ -89,4 +90,6 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+};
+
+export default Home;

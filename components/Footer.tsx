@@ -1,9 +1,15 @@
 import React from "react";
 import ConstraintWidth from "./layout/ConstraintWidth";
 import SidePadding from "./SidePadding";
-import theme from "./../styles/theme";
+import theme from "../styles/theme";
 
-const Footer = () => {
+interface Props {
+  href: string;
+  children?: React.ReactNode;
+  type: "dark" | "light";
+}
+
+const Footer: React.FC<Props> = () => {
   return (
     <footer className="footer">
       <SidePadding>

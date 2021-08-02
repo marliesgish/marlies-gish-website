@@ -1,6 +1,10 @@
 import React from "react";
 
-const SidePadding = ({ children, style = {} }) => (
+interface Props {
+  children?: React.ReactNode;
+}
+
+const SidePadding: React.FC<Props> = ({ children }) => (
   <div className="side-padding">
     {children}
     <style jsx>{`

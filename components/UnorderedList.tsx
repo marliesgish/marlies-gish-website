@@ -1,7 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const UnorderedList = ({ children, style = {} }) => (
+interface Props {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+}
+
+const UnorderedList: React.FC<Props> = ({ children, style = {} }) => (
   <ul className="unordered-list" style={style}>
     {children}
     <style jsx>{`
@@ -14,13 +18,5 @@ const UnorderedList = ({ children, style = {} }) => (
     `}</style>
   </ul>
 );
-
-UnorderedList.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-UnorderedList.defaultProps = {
-  siteTitle: ``,
-};
 
 export default UnorderedList;

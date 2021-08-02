@@ -1,7 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const ConstraintWidth = ({ children, maxWidth = 0 }) => (
+interface Props {
+  children?: React.ReactNode;
+  maxWidth: number;
+}
+
+const ConstraintWidth: React.FC<Props> = ({ children, maxWidth = 0 }) => (
   <div className="constraint-width">
     {children}
     <style jsx>{`
@@ -13,13 +17,5 @@ const ConstraintWidth = ({ children, maxWidth = 0 }) => (
     `}</style>
   </div>
 );
-
-ConstraintWidth.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-ConstraintWidth.defaultProps = {
-  siteTitle: ``,
-};
 
 export default ConstraintWidth;

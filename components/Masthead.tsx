@@ -1,9 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
 import H1 from "./type/H1";
 
-const Masthead = ({ headline, date, center }) => (
-  <header className="header" style={{ textAlign: center ? "center" : "left" }}>
+interface Props {
+  headline: string;
+  date: string;
+  center?: boolean;
+}
+
+const Masthead: React.FC<Props> = ({ headline, date, center }) => (
+  <header
+    className="masthead"
+    style={{ textAlign: center ? "center" : "left" }}
+  >
     <H1>{headline}</H1>
     {date && (
       <div className="date">
@@ -14,7 +22,7 @@ const Masthead = ({ headline, date, center }) => (
     )}
 
     <style jsx>{`
-      .header {
+      .masthead {
         margin-bottom: 50px;
       }
 
@@ -24,13 +32,5 @@ const Masthead = ({ headline, date, center }) => (
     `}</style>
   </header>
 );
-
-Masthead.propTypes = {
-  headline: PropTypes.string.isRequired,
-};
-
-Masthead.defaultProps = {
-  headline: ``,
-};
 
 export default Masthead;

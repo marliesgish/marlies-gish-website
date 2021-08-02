@@ -1,11 +1,12 @@
+import { AppProps } from "next/app";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import theme from "../styles/theme";
 
-function MyApp({ Component, pageProps }) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <div>
-      <Header siteTitle="" />
+      <Header />
       <Component {...pageProps} />
       <Footer />
       <style jsx global>{`
@@ -187,6 +188,6 @@ function MyApp({ Component, pageProps }) {
       `}</style>
     </div>
   );
-}
+};
 
 export default MyApp;
