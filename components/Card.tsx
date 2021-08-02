@@ -2,9 +2,7 @@ import React from "react";
 import ConstraintWidth from "./layout/ConstraintWidth";
 
 interface Props {
-  href: string;
   children?: React.ReactNode;
-  type: "dark" | "light";
 }
 
 const Card: React.FC<Props> = ({ children }) => {

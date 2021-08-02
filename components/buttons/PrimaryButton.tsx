@@ -5,7 +5,7 @@ import classNames from "classnames";
 interface Props {
   href: string;
   children?: React.ReactNode;
-  type: "dark" | "light";
+  type?: "dark" | "light";
 }
 
 const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {

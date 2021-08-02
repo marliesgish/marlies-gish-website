@@ -3,7 +3,7 @@ import H1 from "./type/H1";
 
 interface Props {
   headline: string;
-  date: string;
+  date?: string;
   center?: boolean;
 }
 

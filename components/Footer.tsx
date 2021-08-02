@@ -3,11 +3,7 @@ import ConstraintWidth from "./layout/ConstraintWidth";
 import SidePadding from "./SidePadding";
 import theme from "../styles/theme";
 
-interface Props {
-  href: string;
-  children?: React.ReactNode;
-  type: "dark" | "light";
-}
+interface Props {}
 
 const Footer: React.FC<Props> = () => {
   return (

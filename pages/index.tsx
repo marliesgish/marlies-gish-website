@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <div className="main">
         <SidePadding>
           <ConstraintWidth maxWidth={820}>
-            <ConstraintWidth maxWidth={560} center>
+            <ConstraintWidth maxWidth={560}>
               <Masthead
                 center
                 headline="A psychologist diving into the world of data science and Python"
