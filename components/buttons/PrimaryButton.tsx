@@ -28,6 +28,10 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
             box-shadow: none;
           }
 
+          .primary-button + .primary-button {
+            margin-left: 10px;
+          }
+
           .primary-button.light {
             background-color: rgba(255, 255, 255, 0.1);
             color: #fff;

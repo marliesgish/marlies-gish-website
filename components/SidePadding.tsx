@@ -9,8 +9,8 @@ const SidePadding: React.FC<Props> = ({ children }) => (
     {children}
     <style jsx>{`
       .side-padding {
-        padding-left: 20;
-        padding-right: 20;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     `}</style>
   </div>
