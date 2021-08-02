@@ -20,12 +20,14 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
         <style jsx>{`
           .primary-button {
             background-color: rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, 0.8);
             border-radius: 7px;
-            padding: 7px 14px;
+            padding: 9px 16px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 18px;
             box-shadow: none;
+            transition: background-color 0.2s;
           }
 
           .primary-button + .primary-button {
@@ -35,12 +37,13 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
           .primary-button.light {
             background-color: rgba(255, 255, 255, 0.1);
             color: #fff;
-            transition: background-color 0.2s;
+            font-weight: 500;
           }
 
           .primary-button:hover {
             color: currentColor;
             text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.1);
           }
 
           .primary-button.light:hover {

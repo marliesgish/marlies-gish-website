@@ -35,15 +35,13 @@ const Header: React.FC<Props> = () => (
           </Link>
           <nav className="nav">
             <PrimaryButton href="/" type="light">
-              Resume
-            </PrimaryButton>
-
-            <PrimaryButton href="/" type="light">
               Blog
             </PrimaryButton>
-
             <PrimaryButton href="/" type="light">
               About
+            </PrimaryButton>
+            <PrimaryButton href="/" type="light">
+              Resume
             </PrimaryButton>
           </nav>
         </div>
@@ -59,7 +57,7 @@ const Header: React.FC<Props> = () => (
       .header-inner {
       }
 
-      @media (${breakpoints.laptop}) {
+      @media (${breakpoints.tablet}) {
         .header-inner {
           display: flex;
           flex-direction: row;
@@ -77,7 +75,11 @@ const Header: React.FC<Props> = () => (
         margin-bottom: 20px;
       }
 
-      @media (${breakpoints.laptop}) {
+      .logo:hover .logo-title {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      @media (${breakpoints.tablet}) {
         .logo {
           margin-bottom: 0;
         }
@@ -94,7 +96,7 @@ const Header: React.FC<Props> = () => (
         justify-content: center;
       }
 
-      @media (${breakpoints.laptop}) {
+      @media (${breakpoints.tablet}) {
         .nav {
           display: static;
         }

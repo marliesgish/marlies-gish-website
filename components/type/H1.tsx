@@ -12,7 +12,7 @@ const H1: React.FC<Props> = ({ children, style = {} }) => (
     <style jsx>{`
       h1 {
         margin: 0;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 1.5;
       }
@@ -20,7 +20,6 @@ const H1: React.FC<Props> = ({ children, style = {} }) => (
       @media (${breakpoints.laptop}) {
         h1 {
           font-size: 32px;
-          background-color: red;
         }
       }
     `}</style>
