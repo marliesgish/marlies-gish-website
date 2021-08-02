@@ -1,15 +1,10 @@
 const theme = {
-  fontFamily: {
-    sansSerif: '-apple-system, "Helvetica Neue", Arial, sans-serif',
-    mono: "Menlo, Monaco, monospace",
-  },
+  fontFamily: '"SF Pro Text", -apple-system, Inter, Helvetica',
   colors: {
     text: "#323232",
-    background: "#fff",
-    link: "#1eaaf1",
-    linkHover: "#0d8ecf",
-    border: "#ddd",
-    warning: "#fff3cd",
-    success: "#d4edda",
+    background: "#fafafa",
+    primary: "#22b14d",
   },
 };
+
+export default theme;

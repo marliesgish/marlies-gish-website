@@ -7,6 +7,7 @@ import PostPreview from "../components/PostPreview";
 import SidePadding from "../components/SidePadding";
 import H2 from "../components/type/H2";
 import Paragraph from "../components/type/Paragraph";
+import theme from "./../styles/theme";
 
 export default function Home() {
   const posts = [];
@@ -69,7 +70,7 @@ export default function Home() {
       </Card>
       <style jsx>{`
         .main {
-          background-color: #22b14d;
+          background-color: ${theme.colors.primary};
           color: #fff;
           padding-bottom: 100px;
         }
