@@ -28,11 +28,10 @@ export default function Home() {
               />
             </ConstraintWidth>
             <Paragraph>
-              WWWWelcome to my journey of becoming more familiar in the world of
-              programming and data science. In 2018 I completed my research
-              Master in Psychology where I discovered the fun of analyzing data.
+              Welcome to my journey in becoming an experienced Data Scientist. In 2018 I completed my research
+              Master in Psychology where I discovered the fun in exploring, analyzing and predicting data.
               The journey really started mid 2019 when my curiosity led me to
-              learning Python.
+              learning Python, SQL and Power BI.
             </Paragraph>
           </ConstraintWidth>
         </SidePadding>
