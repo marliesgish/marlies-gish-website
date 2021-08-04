@@ -45,7 +45,8 @@ const Index = ({ posts = [] }) => {
       <Main>
         <div className="grid">
           <Widget
-            icon={<span class="material-icons">subject</span>}
+            iconSrc="/feather.svg"
+            iconAlt="Icon of a feather pen"
             title="Latest blog post"
             buttons={
               <PrimaryButton block small href="/blog">
@@ -67,7 +68,8 @@ const Index = ({ posts = [] }) => {
             })}
           </Widget>
           <Widget
-            icon={<span class="material-icons">face</span>}
+            iconSrc="/woman.svg"
+            iconAlt="Icon of a woman"
             title="About"
             buttons={
               <PrimaryButton block small href="/about">
@@ -82,7 +84,8 @@ const Index = ({ posts = [] }) => {
             </Paragraph>
           </Widget>
           <Widget
-            icon={<span class="material-icons">twitter</span>}
+            iconSrc="/twitter.svg"
+            iconAlt="Icon of Twitter"
             title="Twitter"
             buttons={
               <PrimaryButton block small href="https://twitter.com/marliesgish">
@@ -97,7 +100,8 @@ const Index = ({ posts = [] }) => {
             </Paragraph>
           </Widget>
           <Widget
-            icon={<span class="material-icons">email</span>}
+            iconSrc="/paper-plane.svg"
+            iconAlt="Icon of paper-plane"
             title="Email"
             buttons={
               <PrimaryButton block small href="mailto:me@marliesgish.com">

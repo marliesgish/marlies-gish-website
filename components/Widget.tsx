@@ -1,21 +1,29 @@
 import React from "react";
 import Card from "./Card";
-import PrimaryButton from "./buttons/PrimaryButton";
-import H2 from "./type/H2";
+import Image from "next/image";
 
 interface Props {
-  title?: string;
-  icon?: React.ReactNode;
+  iconSrc: string;
+  iconAlt: string;
+  title: string;
   children?: React.ReactNode;
   buttons?: React.ReactNode;
 }
 
-const Widget: React.FC<Props> = ({ title, icon, children, buttons = [] }) => {
+const Widget: React.FC<Props> = ({
+  iconSrc,
+  iconAlt,
+  title,
+  children,
+  buttons = [],
+}) => {
   return (
     <Card small>
       <div className="content">
         <main className="main">
-          <div className="icon">{icon}</div>
+          <div className="icon">
+            <Image src={iconSrc} alt={iconAlt} width={24} height={24} />
+          </div>
           <div className="title">{title}</div>
           {children}
         </main>
@@ -44,7 +52,7 @@ const Widget: React.FC<Props> = ({ title, icon, children, buttons = [] }) => {
         }
 
         .icon {
-          color: rgba(0, 0, 0, 0.4);
+          opacity: 0.4;
           text-align: center;
           font-size: 14px;
         }
