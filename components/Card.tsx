@@ -1,4 +1,5 @@
 import React from "react";
+import breakpoints from "../styles/breakpoints";
 import ConstraintWidth from "./layout/ConstraintWidth";
 
 interface Props {
@@ -27,8 +28,8 @@ const Card: React.FC<Props> = ({ children }) => {
           background-color: #fff;
           border-radius: 10px;
           max-width: 980px;
-          padding-top: 80px;
-          padding-bottom: 80px;
+          padding-top: 40px;
+          padding-bottom: 40px;
           padding-left: 20px;
           padding-right: 20px;
           /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.09); */
@@ -37,7 +38,14 @@ const Card: React.FC<Props> = ({ children }) => {
         }
 
         .card-wrapper + .card-wrapper {
-          margin-top: 0px;
+          margin-top: 0;
+        }
+
+        @media (${breakpoints.laptop}) {
+          .card {
+            padding-top: 80px;
+            padding-bottom: 80px;
+          }
         }
       `}</style>
     </div>

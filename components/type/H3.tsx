@@ -6,24 +6,24 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-const H2: React.FC<Props> = ({ children, style = {} }) => (
-  <h2 style={style}>
+const H3: React.FC<Props> = ({ children, style = {} }) => (
+  <h3 style={style}>
     {children}
     <style jsx>{`
-      h2 {
+      h3 {
         margin: 0;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
       }
 
       @media (${breakpoints.laptop}) {
-        h2 {
-          font-size: 26px;
+        h3 {
+          font-size: 20px;
         }
       }
     `}</style>
-  </h2>
+  </h3>
 );
 
-export default H2;
+export default H3;

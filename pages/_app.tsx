@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import theme from "../styles/theme";
+import breakpoints from "../styles/breakpoints";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -165,6 +166,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
         html {
           font-family: ${theme.fontFamily};
+          font-size: 18px;
+          line-height: 1.5;
           background-color: ${theme.colors.background};
           color: ${theme.colors.text};
           -webkit-font-smoothing: antialiased;
@@ -179,11 +182,67 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
         a {
           color: inherit;
-          text-decoration: none;
         }
 
         * {
           box-sizing: border-box;
+        }
+
+        p {
+          line-height: 1.5;
+          font-size: 18px;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        h2 {
+          margin-top: 0;
+          font-size: 22px;
+          font-weight: 500;
+
+          color: #323232;
+        }
+
+        @media (${breakpoints.laptop}) {
+          h2 {
+            padding-top: 2em;
+            font-size: 26px;
+          }
+        }
+
+        code {
+          background-color: #f7f7f7;
+          color: #690;
+          font-size: 14px !important;
+          padding: 2px 6px;
+        }
+
+        pre {
+          background-color: green;
+        }
+
+        pre.language-py {
+          border-radius: 10px;
+          font-size: 16px;
+        }
+
+        :not(pre) > code[class*="language-"],
+        pre[class*="language-"] {
+          background: #f7f7f7;
+        }
+
+        blockquote {
+          border-left: 3px solid ${theme.colors.primary};
+          padding: 0;
+          padding-left: 1em;
+          margin-left: 0;
+          font-style: italic;
+        }
+
+        blockquote > p {
+          font-size: 26px;
         }
       `}</style>
     </div>

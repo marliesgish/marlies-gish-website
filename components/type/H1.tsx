@@ -1,4 +1,5 @@
 import React from "react";
+import breakpoints from "../../styles/breakpoints";
 
 interface Props {
   children?: React.ReactNode;
@@ -11,9 +12,15 @@ const H1: React.FC<Props> = ({ children, style = {} }) => (
     <style jsx>{`
       h1 {
         margin: 0;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 1.5;
+      }
+
+      @media (${breakpoints.laptop}) {
+        h1 {
+          font-size: 32px;
+        }
       }
     `}</style>
   </h1>

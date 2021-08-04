@@ -8,9 +8,9 @@ import SidePadding from "../components/SidePadding";
 import H2 from "../components/type/H2";
 import Paragraph from "../components/type/Paragraph";
 import theme from "../styles/theme";
+import { getAllPosts } from "../lib/api";
 
-const Home: React.FC = () => {
-  const posts = [];
+const Index = ({ posts = [] }) => {
   return (
     <div className="container">
       <Head>
@@ -37,21 +37,20 @@ const Home: React.FC = () => {
       </div>
 
       <Card>
-        <H2>Recent posts</H2>
-        {posts.map(({ node }, index) => {
-          const title = node.frontmatter.title || node.fields.slug;
+        <H2>Recent blog posts</H2>
+        {posts.map((post) => {
           return (
             <PostPreview
-              key={node.fields.slug}
-              slug={node.fields.slug}
-              title={title}
-              excerpt={node.excerpt}
-              date={node.frontmatter.date}
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              excerpt={post.excerpt}
+              date={post.date}
             />
           );
         })}
         <div style={{ marginTop: 40 }}>
-          <PrimaryButton href="/">See all posts</PrimaryButton>
+          <PrimaryButton href="/blog">See all posts</PrimaryButton>
         </div>
       </Card>
       <Card>
@@ -64,7 +63,7 @@ const Home: React.FC = () => {
           my life, without really looking what the future would bring choosing
           that path.{" "}
         </Paragraph>
-        <PrimaryButton href="/">Read more</PrimaryButton>
+        <PrimaryButton href="/about">Read more</PrimaryButton>
       </Card>
       <style jsx>{`
         .main {
@@ -90,4 +89,18 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "coverImage",
+    "excerpt",
+  ]);
+
+  return {
+    props: { posts: allPosts.slice(0, 3) }, // only show first 3 posts on homepage
+  };
+}
+
+export default Index;

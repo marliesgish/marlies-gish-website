@@ -7,6 +7,7 @@ import ListItem from "./ListItem";
 import SidePadding from "./SidePadding";
 import ConstraintWidth from "./layout/ConstraintWidth";
 import PrimaryButton from "./buttons/PrimaryButton";
+import breakpoints from "../styles/breakpoints";
 
 interface Props {}
 
@@ -14,54 +15,34 @@ const Header: React.FC<Props> = () => (
   <header className="header">
     <SidePadding>
       <ConstraintWidth maxWidth={820}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <div style={{ position: "relative" }}>
-            <Link href="/" passHref>
-              <a
+        <div className="header-inner">
+          <Link href="/" passHref>
+            <a className="logo">
+              <div style={{ marginRight: 15 }}>
+                <Avatar />
+              </div>
+              <div
                 style={{
-                  color: "#fff",
-                  textDecoration: `none`,
                   display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  position: "relative",
                 }}
               >
-                <div style={{ marginRight: 15 }}>
-                  <Avatar />
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    position: "relative",
-                  }}
-                >
-                  <div className="title">Marlies Gish</div>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <nav>
-            <UnorderedList>
-              <ListItem>
-                <PrimaryButton href="/" type="light">
-                  Blog
-                </PrimaryButton>
-              </ListItem>
-              <ListItem style={{ marginLeft: 10, padding: 0 }}>
-                <PrimaryButton href="/" type="light">
-                  About
-                </PrimaryButton>
-              </ListItem>
-            </UnorderedList>
+                <div className="logo-title">Marlies Gish</div>
+              </div>
+            </a>
+          </Link>
+          <nav className="nav">
+            <PrimaryButton href="/blog" type="light">
+              Blog
+            </PrimaryButton>
+            <PrimaryButton href="/about" type="light">
+              About
+            </PrimaryButton>
+            <PrimaryButton href="/resume" type="light">
+              Resume
+            </PrimaryButton>
           </nav>
         </div>
       </ConstraintWidth>
@@ -73,13 +54,52 @@ const Header: React.FC<Props> = () => (
         padding-bottom: calc(1.45rem + 30px);
       }
 
-      .title {
+      .header-inner {
+      }
+
+      @media (${breakpoints.tablet}) {
+        .header-inner {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .logo {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .logo:hover .logo-title {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      @media (${breakpoints.tablet}) {
+        .logo {
+          margin-bottom: 0;
+        }
+      }
+
+      .logo-title {
         color: #fff;
         font-size: 24px;
         font-weight: 500;
       }
 
       .nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (${breakpoints.tablet}) {
+        .nav {
+          display: static;
+        }
       }
 
       .list {
