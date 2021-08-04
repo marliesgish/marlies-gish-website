@@ -29,7 +29,7 @@ const Widget: React.FC<Props> = ({ title, children, buttons = [] }) => {
 
         .main {
           flex-grow: 1;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
 
         .title {

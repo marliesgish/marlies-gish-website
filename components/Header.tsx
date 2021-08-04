@@ -53,9 +53,6 @@ const Header: React.FC<Props> = () => (
         padding-bottom: calc(1.45rem + 30px);
       }
 
-      .header-inner {
-      }
-
       @media (${breakpoints.tablet}) {
         .header-inner {
           display: flex;

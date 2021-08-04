@@ -13,6 +13,7 @@ import PostHeader from "../../components/PostHeader";
 import PostBody from "../../components/PostBody";
 import Card from "../../components/Card";
 import Main from "../../components/layout/Main";
+import CONSTANTS from "../../constants/constants";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -28,7 +29,9 @@ export default function Post({ post, morePosts, preview }) {
         <Card>
           <article>
             <Head>
-              <title>{post.title} | Marlies Gish</title>
+              <title>
+                {post.title} | {CONSTANTS.pageTitleSuffix}
+              </title>
               <meta property="og:image" content={post.ogImage.url} />
               <link href="/styles/prism.css" rel="stylesheet" />
               <script src="/js/prism.js"></script>
