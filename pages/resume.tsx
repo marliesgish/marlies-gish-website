@@ -17,7 +17,17 @@ const Resume = ({ allPosts }) => {
         <H1>Resume</H1>
 
         <H2>Profile</H2>
-        <Paragraph>{allPosts.profile}</Paragraph>
+        <Paragraph>
+          In the world of data, new developments are constantly occurring. It is
+          this aspect, combined with the love for new challenges, that attracted
+          me to the world of Big Data and Data Science. In addition, working
+          with data offers me many opportunities to combine two of my best
+          skills: analytical thinking and excellent communication skills. My
+          affinity for data is strongly linked to the insight that all data has
+          the potential to be valuable. Everywhere there are hidden treasures of
+          data, which can be transformed into useful information and of which
+          insightful predictions can be made.
+        </Paragraph>
         <hr className="hr" />
         <H2>Work experience</H2>
         <ResumeItem
