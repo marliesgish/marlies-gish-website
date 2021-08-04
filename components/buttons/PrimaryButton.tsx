@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
 import breakpoints from "../../styles/breakpoints";
+import theme from "../../styles/theme";
 
 interface Props {
   href: string;
@@ -30,8 +31,8 @@ const PrimaryButton: React.FC<Props> = ({
         {children}
         <style jsx>{`
           .primary-button {
-            background-color: rgba(0, 0, 0, 0.05);
-            color: rgba(0, 0, 0, 0.8);
+            background-color: ${theme.colors.primary};
+            color: #fff;
             border-radius: 7px;
             padding: 9px 16px;
             text-decoration: none;
@@ -62,9 +63,8 @@ const PrimaryButton: React.FC<Props> = ({
           }
 
           .primary-button:hover {
-            color: currentColor;
+            background-color: #228e42;
             text-decoration: none;
-            background-color: rgba(0, 0, 0, 0.1);
           }
 
           .primary-button.light:hover {

@@ -7,6 +7,7 @@ import ConstraintWidth from "./layout/ConstraintWidth";
 import PrimaryButton from "./buttons/PrimaryButton";
 import breakpoints from "../styles/breakpoints";
 import CONSTANTS from "../constants/constants";
+import theme from "../styles/theme";
 
 interface Props {}
 
@@ -48,7 +49,7 @@ const Header: React.FC<Props> = () => (
     </SidePadding>
     <style jsx>{`
       .header {
-        background-color: #22b14d;
+        background-color: ${theme.colors.primary};
         padding-top: 1.45rem;
         padding-bottom: calc(1.45rem + 30px);
       }
@@ -128,8 +129,6 @@ const Header: React.FC<Props> = () => (
       }
 
       .navLink:hover {
-        /* box-shadow: 0 2px 0 0 currentColor; */
-        /* text-decoration: none; */
         color: #fff !important;
         text-decoration: none;
       }
