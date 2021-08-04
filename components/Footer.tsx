@@ -118,6 +118,7 @@ const Footer: React.FC<Props> = () => {
         .social-link {
           box-shadow: none;
           padding: 5px;
+          border-bottom: 0;
         }
 
         .social-link + .social-link {

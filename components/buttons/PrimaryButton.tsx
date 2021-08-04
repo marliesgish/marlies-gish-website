@@ -34,6 +34,7 @@ const PrimaryButton: React.FC<Props> = ({
             background-color: ${theme.colors.primary};
             color: #fff;
             border-radius: 7px;
+            border-bottom: 0;
             padding: 9px 16px;
             text-decoration: none;
             font-weight: 400;

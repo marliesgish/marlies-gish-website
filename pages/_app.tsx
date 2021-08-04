@@ -181,12 +181,15 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         }
 
         a {
-          color: inherit;
-          text-decoration: underline;
+          color: ${theme.colors.secondary};
+          text-decoration: none;
+          transition: color 0.2s;
+          border-bottom: 1px solid ${theme.colors.secondary};
         }
 
         a:hover {
-          color: ${theme.colors.primary};
+          color: ${theme.colors.secondary};
+          border-bottom-color: transparent;
         }
 
         * {

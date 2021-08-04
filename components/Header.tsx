@@ -69,6 +69,7 @@ const Header: React.FC<Props> = () => (
         display: flex;
         flex-direction: row;
         align-items: center;
+        border-bottom: 0;
         margin-bottom: 20px;
       }
 
