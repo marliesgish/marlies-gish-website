@@ -199,6 +199,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         p {
           line-height: 1.5;
           font-size: 18px;
+          margin-top: 0;
         }
 
         img {
@@ -218,6 +219,14 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
             padding-top: 2em;
             font-size: 26px;
           }
+        }
+
+        h3 {
+        }
+
+        h4 {
+          margin: 0;
+          padding: 0;
         }
 
         code {

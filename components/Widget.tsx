@@ -5,15 +5,17 @@ import H2 from "./type/H2";
 
 interface Props {
   title?: string;
+  icon?: React.ReactNode;
   children?: React.ReactNode;
   buttons?: React.ReactNode;
 }
 
-const Widget: React.FC<Props> = ({ title, children, buttons = [] }) => {
+const Widget: React.FC<Props> = ({ title, icon, children, buttons = [] }) => {
   return (
     <Card small>
       <div className="content">
         <main className="main">
+          <div className="icon">{icon}</div>
           <div className="title">{title}</div>
           {children}
         </main>
@@ -39,6 +41,12 @@ const Widget: React.FC<Props> = ({ title, children, buttons = [] }) => {
           font-weight: 700;
           text-align: center;
           color: rgba(0, 0, 0, 0.4);
+        }
+
+        .icon {
+          color: rgba(0, 0, 0, 0.4);
+          text-align: center;
+          font-size: 14px;
         }
       `}</style>
     </Card>

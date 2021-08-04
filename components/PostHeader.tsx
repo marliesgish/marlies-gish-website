@@ -9,22 +9,18 @@ interface Props {
 
 const PostHeader: React.FC<Props> = ({ title, date }) => {
   return (
-    <>
+    <div className="post-header">
       <H1>{title}</H1>
       <Date>
         <DateFormatter dateString={date} />
       </Date>
 
       <style jsx>{`
-         {
-          /* .date {
-          color: rgba(0, 0, 0, 0.5);
-          line-height: 1;
-          font-size: 14px;
-        } */
+        .post-header {
+          margin-bottom: 32px;
         }
       `}</style>
-    </>
+    </div>
   );
 };
 

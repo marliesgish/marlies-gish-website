@@ -1,8 +1,8 @@
-Who am I?
-Let me answer this question by first introducing myself. I am a 30 something year old, trying to follow my dreams and live my life as best as possible. 
+Who am I? Let me answer this question by first introducing myself. I am a 30 something year old, trying to follow my dreams and live my life as best as possible.
 
+![Image test](/about/home-office.jpg)
 
-## Some facts
+#### A couple of facts
 
 - 🧮 Started my first job as a Data Specialist
 - 🧠 Currently also working at an addiction clinic
@@ -16,5 +16,3 @@ Studying psychology was great, working as a psychologist was and is still intere
 During my studies, my favorite courses involved statistics, the more complicated, the more interesting it seemed. That is also why I chose to do a research Master. Lots and lots of statistics, analyzing data to help explain and predict the world around me. The fun part about University was also that me and my fellow students often had to work together as a team. We worked together on projects and brainstormed about how to solve certain problems. After my studies I did some research on the internet to see which programming language was most popular among the Data Scientists. Python seemed to be the number one choice, so that made me decide to start a basic online course in Python and discover for myself more about programming. Next, I finished a retraining program in Business and Data Analytics and started my first job as Data Specialist.
 
 Right now, I am trying to find my way further into Data Science and explore this hobby. There is so much going on in this world of Data Science, that sometimes, I don't even know where to start anymore. However, step by step, I know I will get there.
-
-![Image test](/about/home-office.jpg)

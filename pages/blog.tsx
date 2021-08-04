@@ -18,7 +18,7 @@ export default function Blog({ allPosts }) {
       </Head>
       <Main>
         <Card>
-          <H1>Blog</H1>
+          <H1 bottomPadding>Blog</H1>
           <div>
             {allPosts.map((post) => {
               return (

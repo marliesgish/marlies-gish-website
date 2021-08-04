@@ -18,9 +18,11 @@ const ResumeItem = ({
         <Date>{date}</Date>
       </div>
       <div>
-        <H3>
-          {position}, <a href={website}>{company}</a>, {location}
-        </H3>
+        <div className="h3">
+          <H3>
+            {position}, <a href={website}>{company}</a>, {location}
+          </H3>
+        </div>
         <Paragraph small>{content}</Paragraph>
       </div>
       <style jsx>{`
@@ -28,12 +30,16 @@ const ResumeItem = ({
           font-size: 14px;
         }
 
+        .h3 {
+          margin-bottom: 5px;
+        }
+
         @media (${breakpoints.tablet}) {
           section {
             display: flex;
           }
           .date-col {
-            padding-top: 10px;
+            padding-top: 7px;
             min-width: 160px;
           }
           .content {

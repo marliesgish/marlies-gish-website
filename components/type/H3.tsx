@@ -14,7 +14,7 @@ const H3: React.FC<Props> = ({ children, style = {} }) => (
         margin: 0;
         font-size: 18px;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.3;
       }
 
       @media (${breakpoints.laptop}) {

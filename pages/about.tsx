@@ -16,7 +16,7 @@ const About = ({ content }) => {
       </Head>
       <Main>
         <Card>
-          <H1>About</H1>
+          <H1 bottomPadding>About</H1>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </Card>
       </Main>

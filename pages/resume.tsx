@@ -17,9 +17,11 @@ const Resume = ({ allPosts }) => {
       </Head>
       <Main>
         <Card>
-          <H1>Resume</H1>
+          <H1 bottomPadding>Resume</H1>
 
-          <H2>Profile</H2>
+          <div className="h2">
+            <H2>Profile</H2>
+          </div>
           <Paragraph>
             In the world of data, new developments are constantly occurring. It
             is this aspect, combined with the love for new challenges, that
@@ -32,7 +34,9 @@ const Resume = ({ allPosts }) => {
             and of which insightful predictions can be made.
           </Paragraph>
           <hr className="hr" />
-          <H2>Work experience</H2>
+          <div className="h2">
+            <H2>Work experience</H2>
+          </div>
           <ResumeItem
             position="Data Specialist"
             company="Novalinq"
@@ -66,7 +70,9 @@ const Resume = ({ allPosts }) => {
             content="As a Student Assistant, I helped professors with the teaching materials. I also supported in reviewing essays."
           />
           <hr className="hr" />
-          <H2>Internships</H2>
+          <div className="h2">
+            <H2>Internships</H2>
+          </div>
           <ResumeItem
             position="Research Assistent"
             company="Leiden University"
@@ -84,7 +90,9 @@ const Resume = ({ allPosts }) => {
             content="With the internship at Brijder, I assisted in research on Post Traumatic Stress Disorder (PSTD) in patients with a severe substance abuse disorder."
           />
           <hr className="hr" />
-          <H2>Education</H2>
+          <div className="h2">
+            <H2>Education</H2>
+          </div>
           <ResumeItem
             position="Business and Data Analytics"
             company="HvA"
@@ -133,6 +141,10 @@ const Resume = ({ allPosts }) => {
           border-top: 1px solid rgba(0, 0, 0, 0.1);
           margin-top: 50px;
           margin-bottom: 50px;
+        }
+
+        .h2 {
+          margin-bottom: 30px;
         }
       `}</style>
     </>
