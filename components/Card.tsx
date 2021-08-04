@@ -1,22 +1,22 @@
+import classNames from "classnames";
 import React from "react";
 import breakpoints from "../styles/breakpoints";
 import ConstraintWidth from "./layout/ConstraintWidth";
 
 interface Props {
   children?: React.ReactNode;
+  small?: boolean;
 }
 
-const Card: React.FC<Props> = ({ children }) => {
+const Card: React.FC<Props> = ({ children, small }) => {
   return (
-    <div className="card">
+    <div
+      className={classNames("card", {
+        small,
+      })}
+    >
       {children}
       <style jsx>{`
-        .card-wrapper {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-
         .card {
           flex: 1;
           background-color: #fff;
@@ -26,22 +26,22 @@ const Card: React.FC<Props> = ({ children }) => {
           padding-bottom: 40px;
           padding-left: 20px;
           padding-right: 20px;
+
+          box-shadow: 0 0px 10px 0px rgb(0 0 0 / 7%);
           /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.09); */
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);*/
         }
 
-        .card-wrapper + .card-wrapper {
-          margin-top: 0;
+        .card.small {
         }
 
         @media (${breakpoints.laptop}) {
-          .card-wrapper {
-            padding-left: 0;
-            padding-right: 0;
+          .card {
+            padding: 80px 80px;
           }
 
-          .card {
+          .card.small {
             padding: 30px 30px;
           }
         }

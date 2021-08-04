@@ -16,7 +16,7 @@ const Masthead: React.FC<Props> = ({ headline, date, center }) => (
     {date && (
       <div className="date">
         <small>
-          <time dateTime={date}>Posted on {date}</time>
+          <time dateTime={date}>{date}</time>
         </small>
       </div>
     )}

@@ -182,6 +182,11 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
         a {
           color: inherit;
+          text-decoration: underline;
+        }
+
+        a:hover {
+          color: ${theme.colors.primary};
         }
 
         * {

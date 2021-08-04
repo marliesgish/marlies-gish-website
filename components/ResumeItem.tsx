@@ -34,7 +34,7 @@ const ResumeItem = ({
           }
           .date-col {
             padding-top: 10px;
-            min-width: 200px;
+            min-width: 160px;
           }
           .content {
             font-size: 16px;

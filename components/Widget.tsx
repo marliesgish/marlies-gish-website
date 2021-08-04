@@ -11,10 +11,10 @@ interface Props {
 
 const Widget: React.FC<Props> = ({ title, children, buttons = [] }) => {
   return (
-    <Card>
+    <Card small>
       <div className="content">
         <main className="main">
-          <div className="title">{title && <H2>{title}</H2>}</div>
+          <div className="title">{title}</div>
           {children}
         </main>
         {buttons && <footer>{buttons}</footer>}
@@ -34,11 +34,11 @@ const Widget: React.FC<Props> = ({ title, children, buttons = [] }) => {
 
         .title {
           margin-bottom: 20px;
-        }
-
-        .date {
-          color: rgba(0, 0, 0, 0.6);
-          line-height: 1;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.4);
         }
       `}</style>
     </Card>

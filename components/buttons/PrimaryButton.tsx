@@ -8,6 +8,7 @@ interface Props {
   children?: React.ReactNode;
   type?: "dark" | "light";
   block?: boolean;
+  small?: boolean;
 }
 
 const PrimaryButton: React.FC<Props> = ({
@@ -15,13 +16,15 @@ const PrimaryButton: React.FC<Props> = ({
   children,
   type = "dark",
   block,
+  small,
 }) => {
   return (
     <Link href={href} passHref>
       <a
         className={classNames("primary-button", {
           light: type === "light",
-          block: block,
+          block,
+          small,
         })}
       >
         {children}
@@ -79,6 +82,10 @@ const PrimaryButton: React.FC<Props> = ({
           @media (${breakpoints.tablet}) {
             .primary-button {
               font-size: 18px;
+            }
+
+            .primary-button.small {
+              font-size: 16px;
             }
           }
         `}</style>

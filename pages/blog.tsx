@@ -4,6 +4,7 @@ import ConstraintWidth from "../components/layout/ConstraintWidth";
 import Main from "../components/layout/Main";
 import Masthead from "../components/Masthead";
 import PostPreview from "../components/PostPreview";
+import H1 from "../components/type/H1";
 import { getAllPosts } from "../lib/api";
 
 export default function Blog({ allPosts }) {
@@ -16,7 +17,7 @@ export default function Blog({ allPosts }) {
       </Head>
       <Main>
         <Card>
-          <Masthead headline="Blog" />
+          <H1>Blog</H1>
           <div>
             {allPosts.map((post) => {
               return (

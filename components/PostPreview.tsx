@@ -4,15 +4,23 @@ import H3 from "./type/H3";
 import DateFormatter from "./DateFormatter";
 import Date from "./Date";
 import Paragraph from "./type/Paragraph";
+import theme from "../styles/theme";
 
 interface Props {
   slug: string;
   title: string;
   excerpt: string;
   date: string;
+  small?: boolean;
 }
 
-const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
+const PostPreview: React.FC<Props> = ({
+  slug,
+  title,
+  excerpt,
+  date,
+  small,
+}) => (
   <article className="article">
     <H3 style={{ marginBottom: "0.3em" }}>
       <Link as={`/blog/${slug}`} href="/blog/[slug]" passHref>
@@ -21,11 +29,11 @@ const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
     </H3>
     <div className="date">
       <Date>
-        Posted on <DateFormatter dateString={date} />
+        <DateFormatter dateString={date} />
       </Date>
     </div>
     <div className="excerpt">
-      <Paragraph>{excerpt}</Paragraph>
+      <Paragraph small={small}>{excerpt}</Paragraph>
     </div>
     <style jsx>{`
       .article + .article {
@@ -33,17 +41,11 @@ const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
       }
 
       .title {
-        text-decoration: underline;
-        color: rgba(0, 0, 0, 0.8);
         font-weight: 500;
       }
 
-      .title:hover {
-        color: rgba(0, 0, 0, 1);
-      }
-
       .date {
-        margin-bottom: 7px;
+        margin-bottom: 10px;
       }
 
       .excerpt {

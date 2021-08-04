@@ -12,7 +12,7 @@ const PostHeader: React.FC<Props> = ({ title, date }) => {
     <>
       <H1>{title}</H1>
       <Date>
-        Posted on <DateFormatter dateString={date} />
+        <DateFormatter dateString={date} />
       </Date>
 
       <style jsx>{`

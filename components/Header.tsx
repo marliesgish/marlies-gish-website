@@ -2,19 +2,18 @@ import React from "react";
 import Link from "next/link";
 
 import Avatar from "./Avatar";
-import UnorderedList from "./UnorderedList";
-import ListItem from "./ListItem";
 import SidePadding from "./SidePadding";
 import ConstraintWidth from "./layout/ConstraintWidth";
 import PrimaryButton from "./buttons/PrimaryButton";
 import breakpoints from "../styles/breakpoints";
+import CONSTANTS from "../constants/constants";
 
 interface Props {}
 
 const Header: React.FC<Props> = () => (
   <header className="header">
     <SidePadding>
-      <ConstraintWidth maxWidth={820}>
+      <ConstraintWidth maxWidth={CONSTANTS.pageWidth}>
         <div className="header-inner">
           <Link href="/" passHref>
             <a className="logo">

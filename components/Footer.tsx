@@ -2,6 +2,7 @@ import React from "react";
 import ConstraintWidth from "./layout/ConstraintWidth";
 import SidePadding from "./SidePadding";
 import theme from "../styles/theme";
+import CONSTANTS from "../constants/constants";
 
 interface Props {}
 
@@ -9,7 +10,7 @@ const Footer: React.FC<Props> = () => {
   return (
     <footer className="footer">
       <SidePadding>
-        <ConstraintWidth maxWidth={820}>
+        <ConstraintWidth maxWidth={CONSTANTS.pageWidth}>
           <div
             style={{
               height: 80,

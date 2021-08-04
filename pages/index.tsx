@@ -9,6 +9,8 @@ import theme from "../styles/theme";
 import { getAllPosts } from "../lib/api";
 import Widget from "../components/Widget";
 import Main from "../components/layout/Main";
+import breakpoints from "../styles/breakpoints";
+import CONSTANTS from "../constants/constants";
 
 const Index = ({ posts = [] }) => {
   return (
@@ -20,7 +22,9 @@ const Index = ({ posts = [] }) => {
       </Head>
       <div className="heading">
         <SidePadding>
-          <ConstraintWidth maxWidth={820}>
+          <ConstraintWidth
+            maxWidth={CONSTANTS.pageWidth - 2 * CONSTANTS.sidePadding}
+          >
             <ConstraintWidth maxWidth={560}>
               <Masthead
                 center
@@ -41,9 +45,9 @@ const Index = ({ posts = [] }) => {
       <Main>
         <div className="grid">
           <Widget
-            title="✍️ Latest blog post"
+            title="Latest blog post"
             buttons={
-              <PrimaryButton block href="/blog">
+              <PrimaryButton block small href="/blog">
                 See all posts
               </PrimaryButton>
             }
@@ -56,61 +60,51 @@ const Index = ({ posts = [] }) => {
                   title={post.title}
                   excerpt={post.excerpt}
                   date={post.date}
+                  small
                 />
               );
             })}
           </Widget>
           <Widget
-            title="👩‍💻 About me"
+            title="About"
             buttons={
-              <PrimaryButton block href="/about">
+              <PrimaryButton block small href="/about">
                 Read more
               </PrimaryButton>
             }
           >
-            <Paragraph>
+            <Paragraph small>
               Let me answer this question by first introducing myself. I am a 30
               something year old, trying to follow my dreams and live my life as
               best as possible.
             </Paragraph>
           </Widget>
           <Widget
-            title="🤓 Things I'd like to learn"
+            title="Twitter"
             buttons={
-              <PrimaryButton block href="/about">
-                Read more
+              <PrimaryButton block small href="https://twitter.com/marliesgish">
+                Follow me on Twitter
               </PrimaryButton>
             }
           >
-            <Paragraph>
+            <Paragraph small>
               Let me answer this question by first introducing myself. I am a 30
               something year old, trying to follow my dreams and live my life as
-              best as possible. Looking at my resume, you can see that I have
-              always chosen to do and study what I think was interesting at that
-              period of my life, without really looking what the future would
-              bring choosing that path.{" "}
+              best as possible.
             </Paragraph>
           </Widget>
           <Widget
-            title="🤝 Get in touch"
+            title="Get in touch"
             buttons={
-              <>
-                <PrimaryButton block href="mailto:me@marliesgish.com">
-                  Email
-                </PrimaryButton>
-                <PrimaryButton block href="https://twitter.com/marliesgish">
-                  Twitter
-                </PrimaryButton>
-              </>
+              <PrimaryButton block small href="mailto:me@marliesgish.com">
+                Send me an email
+              </PrimaryButton>
             }
           >
-            <Paragraph>
+            <Paragraph small>
               Let me answer this question by first introducing myself. I am a 30
               something year old, trying to follow my dreams and live my life as
-              best as possible. Looking at my resume, you can see that I have
-              always chosen to do and study what I think was interesting at that
-              period of my life, without really looking what the future would
-              bring choosing that path.{" "}
+              best as possible.
             </Paragraph>
           </Widget>
         </div>
@@ -118,9 +112,16 @@ const Index = ({ posts = [] }) => {
       <style jsx>{`
         .grid {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          column-gap: 20px;
-          row-gap: 20px;
+          grid-template-columns: 1fr;
+          row-gap: 30px;
+        }
+
+        @media (${breakpoints.tablet}) {
+          .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+          }
         }
 
         .heading {
