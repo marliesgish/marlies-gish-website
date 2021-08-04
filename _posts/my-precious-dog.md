@@ -11,4 +11,4 @@ Besides programming, python, and pushing my brains to its limit, I also have ano
 
 Even though he can be a tough one, a dog with an instruction manual, he is also the best mirror one can have. If I am stressed, he will feel that. If I am happy, he is happy. If I am to hyper, he will get even more hyper. Walking him makes both of us go into a relaxing state. Walking him is the best remedy when not being able to fix the bugs that unfortunately occur in programming. Taking a step backward, going outside, chilling my mind, often ends in actually being clear minded again and being able to fix that problem where I have been looking at for the last 8 hours. A nice small walk, 30 minutes away from the screen, focusing on the bond with my precious dog Diesel, is often the best solution to fixing anything programming related. Thank you for that, Diesel!
 
-![Image test](/blog/my-precious-dog/diesel.jpg)
+![Dog Diesel](/blog/my-precious-dog/diesel.jpg)
