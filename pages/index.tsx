@@ -78,7 +78,7 @@ const Index = ({ posts = [] }) => {
             }
           >
             <Paragraph small>
-              Who am I? Let me answer this question by first introducing myself. I am in my early 30s, trying to follow my dreams and live my life as
+              Who am I? Let me answer this question by first introducing myself. I am in my early thirties, trying to follow my dreams and live my life as
               best as possible.
             </Paragraph>
           </Widget>

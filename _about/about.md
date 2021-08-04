@@ -1,4 +1,4 @@
-Who am I? Let me answer this question by first introducing myself. ho am I? Let me answer this question by first introducing myself. I am in my early thirties, trying to follow my dreams and live my life as
+Who am I? Let me answer this question by first introducing myself. Who am I? Let me answer this question by first introducing myself. I am in my early thirties, trying to follow my dreams and live my life as
               best as possible.
 
 ![Image test](/about/home-office.jpg)
