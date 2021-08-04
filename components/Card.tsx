@@ -8,19 +8,13 @@ interface Props {
 
 const Card: React.FC<Props> = ({ children }) => {
   return (
-    <div className="card-wrapper">
-      <div className="card">
-        <ConstraintWidth maxWidth={820}>{children}</ConstraintWidth>
-      </div>
+    <div className="card">
+      {children}
       <style jsx>{`
         .card-wrapper {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          padding-bottom: 30px;
-          padding-left: 10px;
-          padding-right: 10px;
-          margin-top: -30px;
         }
 
         .card {
@@ -42,9 +36,13 @@ const Card: React.FC<Props> = ({ children }) => {
         }
 
         @media (${breakpoints.laptop}) {
+          .card-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
           .card {
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding: 30px 30px;
           }
         }
       `}</style>

@@ -7,14 +7,21 @@ interface Props {
   href: string;
   children?: React.ReactNode;
   type?: "dark" | "light";
+  block?: boolean;
 }
 
-const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
+const PrimaryButton: React.FC<Props> = ({
+  href,
+  children,
+  type = "dark",
+  block,
+}) => {
   return (
     <Link href={href} passHref>
       <a
         className={classNames("primary-button", {
           light: type === "light",
+          block: block,
         })}
       >
         {children}
@@ -31,8 +38,18 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
             transition: background-color 0.2s;
           }
 
+          .primary-button.block {
+            display: block;
+            text-align: center;
+          }
+
           .primary-button + .primary-button {
             margin-left: 10px;
+          }
+
+          .primary-button.block + .primary-button.block {
+            margin-left: 0;
+            margin-top: 10px;
           }
 
           .primary-button.light {

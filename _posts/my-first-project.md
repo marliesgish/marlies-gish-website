@@ -1,5 +1,5 @@
 ---
-title: "My first project: Mortgage calculator"
+title: "My first project"
 excerpt: "During my journey into getting to know Python, I have done lots of small projects to practice my python skills."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-04-03"

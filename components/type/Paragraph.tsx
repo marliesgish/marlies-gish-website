@@ -19,7 +19,7 @@ const Paragraph: React.FC<Props> = ({ children, style, small }) => (
     <style jsx>{`
       p {
         font-size: 16px;
-        line-height: 1.8;
+        line-height: 1.6;
         margin-top: 0;
       }
 

@@ -19,12 +19,14 @@ const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
         <a className="title">{title}</a>
       </Link>
     </H3>
+    <div className="date">
+      <Date>
+        Posted on <DateFormatter dateString={date} />
+      </Date>
+    </div>
     <div className="excerpt">
       <Paragraph>{excerpt}</Paragraph>
     </div>
-    <Date>
-      Posted on <DateFormatter dateString={date} />
-    </Date>
     <style jsx>{`
       .article + .article {
         margin-top: 50px;
@@ -34,6 +36,14 @@ const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
         text-decoration: underline;
         color: rgba(0, 0, 0, 0.8);
         font-weight: 500;
+      }
+
+      .title:hover {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .date {
+        margin-bottom: 7px;
       }
 
       .excerpt {

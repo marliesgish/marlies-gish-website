@@ -12,6 +12,7 @@ const H2: React.FC<Props> = ({ children, style = {} }) => (
     <style jsx>{`
       h2 {
         margin: 0;
+        padding: 0;
         font-size: 22px;
         font-weight: 500;
         line-height: 1.2;

@@ -12,6 +12,7 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import PostHeader from "../../components/PostHeader";
 import PostBody from "../../components/PostBody";
 import Card from "../../components/Card";
+import Main from "../../components/layout/Main";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div>
+    <Main>
       {router.isFallback ? (
         <div>Loading…</div>
       ) : (
@@ -38,7 +39,7 @@ export default function Post({ post, morePosts, preview }) {
           </article>
         </Card>
       )}
-    </div>
+    </Main>
   );
 }
 
