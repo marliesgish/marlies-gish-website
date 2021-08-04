@@ -21,11 +21,11 @@ I started out with a book that I got as a present. This book has helped me so mu
 
 The first project is about making a game, using the library Pygame. The idea is to make an alien game where a spaceship has to shoot the aliens moving down towards the spaceship. I was completely amazed by all the details you should focus on and everything one should keep in mind. At first, I got a little lost, there was so much to think about! By practicing and being sure to understand one step at a time, I slowly made progress. My strategy was to understand everything I did, before going onto the next step. Right now, I can almost dream of the code which made it so much easier to create new programs and new code.
 
-MAKE GIF OF PYGAME
+![Preview of game alien Invasion](/blog/my-own-training-program/game-alien-invasion.gif)
 
 The second project is an introduction into Data Analysis, using libraries such as matplotlib, numpy, and requests. For me, the most interesting part was the use of APIs. As a beginner, this was completely new to me. It felt so good that you can use information and formatted data to create nice graphs and figures! One exercise was about making a visualization of all the earthquakes in the world of the last 24 hours. Relative earthquake magnitudes are color-coded using a color pallet, how cool is that!
 
-IMAGE OF EARTHQUAKES
+![Preview of vizualisation earthquakes](/blog/my-own-training-program/visualization-earthquakes-worldmap.gif)
 
 The third part is about making a web application, using Django. To be honest, I have put this project on hold for the time being. I cannot share my experience with this, because I got distracted by another course on Udemy. I subscribed a couple of months ago, and all of a sudden I felt this inner pressure and excitement of finishing this course before anything else. The course that I am talking about is described below.
 
