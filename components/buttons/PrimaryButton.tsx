@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
+import breakpoints from "../../styles/breakpoints";
 
 interface Props {
   href: string;
@@ -25,7 +26,7 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
             padding: 9px 16px;
             text-decoration: none;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 16px;
             box-shadow: none;
             transition: background-color 0.2s;
           }
@@ -56,6 +57,12 @@ const PrimaryButton: React.FC<Props> = ({ href, children, type = "dark" }) => {
           }
 
           .primary-button:focus {
+          }
+
+          @media (${breakpoints.tablet}) {
+            .primary-button {
+              font-size: 18px;
+            }
           }
         `}</style>
       </a>

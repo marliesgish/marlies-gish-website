@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { formatPostDate } from "../helpers/helpers";
+import H3 from "./type/H3";
+import DateFormatter from "./DateFormatter";
+import Date from "./Date";
+import Paragraph from "./type/Paragraph";
 
 interface Props {
   slug: string;
@@ -11,32 +14,31 @@ interface Props {
 
 const PostPreview: React.FC<Props> = ({ slug, title, excerpt, date }) => (
   <article className="article">
-    <h3>
-      <Link href="/" passHref>
-        <a className="post-title">title</a>
+    <H3 style={{ marginBottom: "0.3em" }}>
+      <Link as={`/blog/${slug}`} href="/blog/[slug]" passHref>
+        <a className="title">{title}</a>
       </Link>
-    </h3>
-    <p
-      style={{ marginBottom: 5 }}
-      dangerouslySetInnerHTML={{ __html: excerpt }}
-    />
-    <div className="date">
-      <small style={{ fontSize: 14, opacity: 0.5, lineHeight: 1 }}>
-        <time dateTime={date}>{formatPostDate(date)}</time>
-      </small>
+    </H3>
+    <div className="excerpt">
+      <Paragraph>{excerpt}</Paragraph>
     </div>
+    <Date>
+      Posted on <DateFormatter dateString={date} />
+    </Date>
     <style jsx>{`
       .article + .article {
         margin-top: 50px;
       }
 
-      .post-title {
+      .title {
+        text-decoration: underline;
         color: rgba(0, 0, 0, 0.8);
+        font-weight: 500;
       }
 
-      .date {
-        color: rgba(0, 0, 0, 0.6);
-        line-height: 1;
+      .excerpt {
+        margin-top: 0;
+        margin-bottom: 0.5em;
       }
     `}</style>
   </article>

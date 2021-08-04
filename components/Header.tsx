@@ -34,13 +34,13 @@ const Header: React.FC<Props> = () => (
             </a>
           </Link>
           <nav className="nav">
-            <PrimaryButton href="/" type="light">
+            <PrimaryButton href="/blog" type="light">
               Blog
             </PrimaryButton>
-            <PrimaryButton href="/" type="light">
+            <PrimaryButton href="/about" type="light">
               About
             </PrimaryButton>
-            <PrimaryButton href="/" type="light">
+            <PrimaryButton href="/resume" type="light">
               Resume
             </PrimaryButton>
           </nav>
