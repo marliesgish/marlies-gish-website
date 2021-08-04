@@ -28,11 +28,9 @@ const Index = ({ posts = [] }) => {
               />
             </ConstraintWidth>
             <Paragraph>
-              Welcome to my journey in becoming an experienced Data Scientist.
-              In 2018 I completed my research Master in Psychology where I
-              discovered the fun in exploring, analyzing and predicting data.
-              The journey really started mid 2019 when my curiosity led me to
-              learning Python, SQL and Power BI.
+              Welcome to my journey towards becoming an experienced Data Scientist.
+              In 2018 I completed my Research Master in Psychology where I discovered the joy of exploring, analyzing and predicting data.
+              The journey really started mid 2019 when my curiosity led me tolearning Python, SQL and Power BI.
             </Paragraph>
           </ConstraintWidth>
         </SidePadding>
