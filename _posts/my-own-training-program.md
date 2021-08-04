@@ -1,6 +1,7 @@
 ---
 title: "My own training program"
-excerpt: "A description of my plans to become a ..."
+excerpt: "Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed.
+"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-02-19"
 ogImage:
@@ -35,8 +36,8 @@ This course was a little bit of a repetition of the book Python Crash Course tha
 To do
 As you can see, I am just starting. I have so many things I still want to do and learn, and it is hard for me to think about where to start. I subscribed for some other courses on Udemy which I still need to finish and there is also a book I would like to read. This is what is still on my to do list:
 
-Continue the online Udemy course The Complete SQL Bootcamp
-Start the online Udemy course Python for Data Science and Machine Learning Bootcamp
-Find a certified study to elaborate my knowledge in data analytics
-Find an internship where I can learn much more about Data Science
-Install Linux on my laptop and understand all the ins and outs of this operating system
+- Continue the online Udemy course The Complete SQL Bootcamp
+- Start the online Udemy course Python for Data Science and Machine Learning Bootcamp
+- Find a certified study to elaborate my knowledge in data analytics
+- Find an internship where I can learn much more about Data Science
+- Install Linux on my laptop and understand all the ins and outs of this operating system

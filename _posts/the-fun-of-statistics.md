@@ -1,6 +1,6 @@
 ---
 title: "The fun of statistics in my earlier days"
-excerpt: "A description of my plans to become a ..."
+excerpt: "My love for statistics started way back. In the days when they called it Mathematics. Of course, I am talking about my time in high school."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-02-16"
 ogImage:

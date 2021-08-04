@@ -2,7 +2,7 @@
 title: "My precious dog"
 excerpt: "Besides programming, python, and pushing my brains to its limit, I also have another hobby. My darling Diesel."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
-date: "2020-08-01"
+date: "2021-08-01"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---

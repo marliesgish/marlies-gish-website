@@ -1,4 +1,5 @@
-Who am I? Let me answer this question by first introducing myself. I am a 30 something year old, trying to follow my dreams and live my life as best as possible.
+Who am I? Let me answer this question by first introducing myself. ho am I? Let me answer this question by first introducing myself. I am in my early thirties, trying to follow my dreams and live my life as
+              best as possible.
 
 ![Image test](/about/home-office.jpg)
 

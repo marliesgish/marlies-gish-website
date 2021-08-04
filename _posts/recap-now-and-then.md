@@ -1,8 +1,8 @@
 ---
 title: "Recap, now and then"
-excerpt: "Besides programming, python, and pushing my brains to its limit, I also have another hobby. My darling Diesel."
+excerpt: "It’s been a while since updating my website. What progress have I made in the world of Data Science?"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
-date: "2020-08-03"
+date: "2021-08-03"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---

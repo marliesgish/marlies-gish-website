@@ -78,8 +78,7 @@ const Index = ({ posts = [] }) => {
             }
           >
             <Paragraph small>
-              Let me answer this question by first introducing myself. I am a 30
-              something year old, trying to follow my dreams and live my life as
+              Who am I? Let me answer this question by first introducing myself. I am in my early 30s, trying to follow my dreams and live my life as
               best as possible.
             </Paragraph>
           </Widget>
@@ -94,9 +93,7 @@ const Index = ({ posts = [] }) => {
             }
           >
             <Paragraph small>
-              Let me answer this question by first introducing myself. I am a 30
-              something year old, trying to follow my dreams and live my life as
-              best as possible.
+              Want to follow me along in my journey of becoming a (better) Data Scientist?
             </Paragraph>
           </Widget>
           <Widget
@@ -110,9 +107,7 @@ const Index = ({ posts = [] }) => {
             }
           >
             <Paragraph small>
-              Let me answer this question by first introducing myself. I am a 30
-              something year old, trying to follow my dreams and live my life as
-              best as possible.
+              Want to shoot me a question, or do you have any comments or advice?
             </Paragraph>
           </Widget>
         </div>

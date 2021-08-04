@@ -1,5 +1,5 @@
 ---
-title: "My first project"
+title: "Mortgage calculator, step by step"
 excerpt: "During my journey into getting to know Python, I have done lots of small projects to practice my python skills."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-04-03"
@@ -9,7 +9,7 @@ ogImage:
 
 During my journey into getting to know Python, I have done lots of small projects to practice my python skills. I thought it might be fun to show how I made my way through the exercise to write a mortgage calculator. I wrote this in three different ways, representing the three different steps and growth through my practice.
 
-![Image test](/blog/my-first-project/calculator.jpg)
+![Image test](/blog/mortgage-calculator-step-by-step/calculator.jpg)
 
 ## Step 1
 I started out with a script of which I now think: gosh this is so bad!! However, it was very good practice and by trying out different things, I also learned what can be done better. At first, I wrote the very basics: input the mortgage, input the years in which it should be paid back, get the terms, calculating the payment per term including interest, and printing out the information. I also tried to put some more advanced stuff in here, or at least, to me it felt like more advanced. 1) I controlled for invalid input (it has to be a number), and 2) I differentiated between plural and singular terms.
