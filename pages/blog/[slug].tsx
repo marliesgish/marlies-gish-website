@@ -27,8 +27,7 @@ export default function Post({ post, morePosts, preview }) {
                 {post.title} | {CONSTANTS.pageTitleSuffix}
               </title>
               <meta property="og:image" content={post.ogImage.url} />
-              <link href="/styles/prism.css" rel="stylesheet" />
-              <script src="/js/prism.js"></script>
+              <script async src="/js/prism.js"></script>
             </Head>
 
             <PostHeader title={post.title} date={post.date} />

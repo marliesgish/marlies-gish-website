@@ -1,7 +1,6 @@
 ---
 title: "My own training program"
-excerpt: "Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed.
-"
+excerpt: "Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-02-19"
 ogImage:

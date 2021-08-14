@@ -12,7 +12,28 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug, fields = []) {
+type Post = {
+  slug?: string;
+  title?: string;
+  excerpt?: string;
+  coverImage?: string;
+  date?: string;
+  ogImage?: {
+    url: string;
+  };
+  content?: string;
+};
+
+type Field =
+  | "title"
+  | "slug"
+  | "content"
+  | "excerpt"
+  | "coverImage"
+  | "date"
+  | "ogImage";
+
+export function getPostBySlug(slug, fields = []): Post {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   // console.log("fullPath", fullPath);
@@ -21,9 +42,9 @@ export function getPostBySlug(slug, fields = []) {
   const { data, content } = matter(fileContents);
   // console.log("fileContents", fileContents);
 
-  const items = {};
+  const items: Post = {};
   // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
+  fields.forEach((field: Field) => {
     if (field === "slug") {
       items[field] = realSlug;
     }
@@ -41,7 +62,8 @@ export function getPostBySlug(slug, fields = []) {
 }
 
 export function getAllPosts(fields = []) {
-  const slugs = getPostSlugs();
+  const slugs: string[] = getPostSlugs();
+
   // console.log("slugs", slugs);
   const posts = slugs
     .filter((s) => s !== ".DS_Store")

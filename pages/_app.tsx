@@ -11,6 +11,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Component {...pageProps} />
       <Footer />
       <style jsx global>{`
+        @import "../styles/prism.css";
         @font-face {
           font-family: "Inter";
           font-style: normal;
