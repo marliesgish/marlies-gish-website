@@ -44,62 +44,52 @@ const Index = ({ posts = [] }) => {
 
       <Main>
         <div className="grid">
-          <Widget
-            iconSrc="/feather.svg"
-            iconAlt="Icon of a feather pen"
-            title="Latest blog post"
-            buttons={
-              <PrimaryButton block small href="/blog">
-                See all posts
-              </PrimaryButton>
-            }
-          >
-            {posts.map((post) => {
-              return (
-                <PostPreview
-                  key={post.slug}
-                  slug={post.slug}
-                  title={post.title}
-                  excerpt={post.excerpt}
-                  date={post.date}
-                  small
-                />
-              );
-            })}
-          </Widget>
+          <div className="grid-item">
+            <Widget
+              iconSrc="/feather.svg"
+              iconAlt="Icon of a feather pen"
+              title="My latest writing"
+              buttons={
+                <PrimaryButton block small href="/blog">
+                  See all blog posts
+                </PrimaryButton>
+              }
+            >
+              {posts.map((post) => {
+                return (
+                  <PostPreview
+                    key={post.slug}
+                    slug={post.slug}
+                    title={post.title}
+                    excerpt={post.excerpt}
+                    date={post.date}
+                    small
+                  />
+                );
+              })}
+            </Widget>
+          </div>
           <Widget
             iconSrc="/woman.svg"
             iconAlt="Icon of a woman"
             title="About"
             buttons={
               <PrimaryButton block small href="/about">
-                Read more
+                More about me
               </PrimaryButton>
             }
           >
             <Paragraph small>
-              Who am I? Let me answer this question by first introducing myself. I am in my early thirties, trying to follow my dreams and live my life as
-              best as possible.
+              Who am I? Let me answer this question by first introducing myself.
+              I am in my early thirties, trying to follow my dreams and live my
+              life as best as possible.
             </Paragraph>
           </Widget>
-          <Widget
-            iconSrc="/twitter.svg"
-            iconAlt="Icon of Twitter"
-            title="Twitter"
-            buttons={
-              <PrimaryButton block small href="https://twitter.com/marliesgish">
-                Follow me on Twitter
-              </PrimaryButton>
-            }
-          >
-            <Paragraph small>
-              Want to follow me along in my journey of becoming a (better) Data Scientist?
-            </Paragraph>
-          </Widget>
+
           <Widget
             iconSrc="/paper-plane.svg"
             iconAlt="Icon of paper-plane"
-            title="Email"
+            title="Contact me"
             buttons={
               <PrimaryButton block small href="mailto:me@marliesgish.com">
                 Send me an email
@@ -107,7 +97,8 @@ const Index = ({ posts = [] }) => {
             }
           >
             <Paragraph small>
-              Want to shoot me a question, or do you have any comments or advice?
+              Want to shoot me a question, or do you have any comments or
+              advice?
             </Paragraph>
           </Widget>
         </div>
@@ -124,6 +115,11 @@ const Index = ({ posts = [] }) => {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 30px;
+          }
+
+          .grid-item {
+            grid-column-start: 1;
+            grid-column-end: 3;
           }
         }
 
@@ -147,7 +143,7 @@ export async function getStaticProps() {
   ]);
 
   return {
-    props: { posts: allPosts.slice(0, 1) }, // only show first 3 posts on homepage
+    props: { posts: allPosts.slice(0, 3) }, // only show first 3 posts on homepage
   };
 }
 
