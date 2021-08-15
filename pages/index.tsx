@@ -28,7 +28,7 @@ const Index = ({ posts = [] }) => {
             <ConstraintWidth maxWidth={560}>
               <Masthead
                 center
-                headline="A psychologist diving into the world of data science and Python"
+                headline="A psychologist diving into the world of data science"
               />
             </ConstraintWidth>
             <Paragraph>
@@ -36,7 +36,7 @@ const Index = ({ posts = [] }) => {
               Scientist. In 2018 I completed my Research Master in Psychology
               where I discovered the joy of exploring, analyzing and predicting
               data. The journey really started mid 2019 when my curiosity led me
-              tolearning Python, SQL and Power BI.
+              to learning Python, SQL and Power BI.
             </Paragraph>
           </ConstraintWidth>
         </SidePadding>
