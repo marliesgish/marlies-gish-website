@@ -38,11 +38,19 @@ const Resume = ({ allPosts }) => {
             <H2>Work experience</H2>
           </div>
           <ResumeItem
+            position="Data Engineer"
+            company="Belastingdient"
+            location="Utrecht"
+            website="https://www.belastingdienst.nl"
+            date="Oct '21 - Present"
+            content="Responsibilities are developing models and dashboards to optimize services and efficiency. Furthermore, being involved in the final phase: optimizing the code and taking the models and dashboards into production, while also setting up the extraction, transformation and load process."
+          />
+          <ResumeItem
             position="Data Specialist"
             company="Novalinq"
             location="Haarlem"
             website="https://www.novalinq.nl"
-            date="Apr '21 - Present"
+            date="Apr '21 - Oct '21"
             content="The main tasks are converting Big Data into Datawarehouses after which analyses can be done to improve business processes, using Azure, Data Factory, Databricks, Spark, SQL, Python and Power BI. In addition, part of my job responsibilities include teaching the basics of Data Engineering and Data Analysis to students."
           />
           <ResumeItem
@@ -59,7 +67,7 @@ const Resume = ({ allPosts }) => {
             location="Leiden"
             website="https://www.rivierduinen.nl"
             date="Aug '18 - Mar '19"
-            content="Within this position, I supported PHD students with their researches. Among other things, I helped them to write research proposals and to start the research in practice."
+            content="Within this position, I supported PHD students with their studies. Among other things, I made analyzed data and wrote reports containing graphs and tables showing the most striking results."
           />
           <ResumeItem
             position="Student Assistent"

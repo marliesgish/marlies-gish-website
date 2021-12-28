@@ -28,7 +28,7 @@ const Index = ({ posts = [] }) => {
             <ConstraintWidth maxWidth={560}>
               <Masthead
                 center
-                headline="A psychologist diving into the world of data science"
+                headline="Diving into the world of Data Science"
               />
             </ConstraintWidth>
             <Paragraph>

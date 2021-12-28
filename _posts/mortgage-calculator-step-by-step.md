@@ -12,15 +12,16 @@ During my journey into getting to know Python, I have done lots of small project
 ![Image test](/blog/mortgage-calculator-step-by-step/calculator.jpg)
 
 ## Step 1
-I started out with a script of which I now think: gosh this is so bad!! However, it was very good practice and by trying out different things, I also learned what can be done better. At first, I wrote the very basics: input the mortgage, input the years in which it should be paid back, get the terms, calculating the payment per term including interest, and printing out the information. I also tried to put some more advanced stuff in here, or at least, to me it felt like more advanced. 1) I controlled for invalid input (it has to be a number), and 2) I differentiated between plural and singular terms.
+I started out with a script of which I now think: gosh this is so bad!! However, it was very good practice and by trying out different things, I also learned what can be done better. At first, I wrote the very basics: input of the mortgage, input of the years in which it should be paid back, get the terms, calculating the payment per term including interest, and printing out the information. I also tried to put some more advanced stuff in here, or at least, to me it felt like more advanced. 1) I controlled for invalid input (it has to be a number), and 2) I differentiated between plural and singular terms.
 
 Evaluation:
-First of all, I returned every value of every function to the instance. In the end, there would be so many self. values, which is not necessary. It could even be dangerous when re-using these values, changing them by the next functions while this should not be the case. What I did, was renaming these values in each function that I re-used them in, so this danger was dealt with. However, this is lots of extra code while it could have been much simpler. Also, why did I return some variables to its own instance, while there was no need to? There was no need to recall self.interest_usable or self.terms_total_readable etc. So, this was the first thing I dealt with during the next step.
+First of all, I returned every value of every function to the instance. In the end, there would be so many self. values, which is not necessary. Why did I return some variables to its own instance, while there was no need to? There was no need to  ever recall self.interest_usable or self.terms_total_readable etc. So, this was the first thing I dealt with during the next step.
 
 ```py
 import math
 
 class MortgageCalculator():
+
 
     def __init__(self, interest):
         self.amount_total = self.get_amount_total()
@@ -34,6 +35,7 @@ class MortgageCalculator():
         self.terms_plural_singular = self.get_terms_plural_singular()
         self.years_plural_singular = self.get_years_plural_singular()
         self.get_printed_information()
+
 
     def get_amount_total(self):
         while True:
@@ -63,6 +65,7 @@ class MortgageCalculator():
             }
         return terms_dict
 
+
     def get_terms_total(self):
         while True:
             terms_readable = input("How often would you like to have your payments: 'yearly', 'monthly', 'weekly' or 'daily'?")
@@ -78,6 +81,7 @@ class MortgageCalculator():
             else:
                 print("Your input is not valid, please try again\n")
                 continue
+
 
     def get_terms_payment (self):
         amount_total = float(self.amount_total)
@@ -102,6 +106,7 @@ class MortgageCalculator():
         terms_payment = "{:.2f}".format(math.ceil(terms_payment*20)/20) 
         return terms_payment
 
+
     def get_terms_dict(self):
         terms_dict = {
             "yearly": {
@@ -123,9 +128,11 @@ class MortgageCalculator():
         }
         return terms_dict
 
+
     def get_terms_plural_singular(self):
         t = self.terms_dict[self.terms_total_readable]
         return t["plural"] if int(self.terms_total_number) > 1 else t["singular"]
+
 
     def get_years_plural_singular(self):
         y = self.terms_dict["yearly"]
@@ -148,20 +155,24 @@ person = MortgageCalculator(5.2
 ```
 
 ## Step 2
-The first thing I did with my second script was rewriting the variables. As explained in the first step, there was no need to return every single variable to its own instance. Most of them could just be passed onto the next function. The only thing I would want to be able to recall from the instance, was the actual mortgage payment per month. The rest did not really matter and was only important to calculate in between the different functions. This made the code look a lot cleaner and easy to read.
+The first thing I did with my second script was rewriting the variables. As explained in the first step, there was no need to return every single variable to its own instance. Most of them could just be passed onto the next function. Because I thought it could also be risky when re-using these values, I renamed these values in each function that I re-used them in, so they could not be overwritten and the danger was dealt with. 
+
+ The only thing I would want to be able to recall from the instance, was the actual mortgage payment per month. The rest did not really matter and was only important to calculate in between the different functions. This made the code look a lot cleaner and easy to read.
 
 Evaluation:
-What I thought was so smart, but in retrospect was not the right way, was making my own formula in calculating the monthly payment. I tried to calculate the payment plus interest on a yearly basis, and divided it by the total terms. After one year, I calculated the remaining payment with interest again, and again divided it by the total terms. I did this until there were no terms left. The remaining money, which would also be a very small amount, I would add onto the total amount of payment. I then calculated the average payment per month, which would be what the person would have to pay monthly.
+What I thought was so smart, but in retrospect was not the right way, was making my own formula in calculating the monthly payment. I tried to calculate the payment plus interest on a yearly basis, and divided it by the total terms. After one year, I calculated the remaining payment with interest again, and again divided it by the total terms. I did this until there were no terms left. The remaining money, which would be a very small amount, would be added onto the total amount of payment. I then calculated the average payment per month, which would be what the person would have to pay monthly.
 
 ```py
 import math
 
 class MortgageCalculator():
 
+
     def __init__(self, interest):
         self.amount_total = self.get_amount_total()
         self.interest = interest
         self.start()
+
 
     def start(self):
         interest_usable = self.interest/100+1
@@ -177,8 +188,8 @@ class MortgageCalculator():
         years_plural_singular = self.get_years_plural_singular(
             terms_total_number, terms_dict)
 
-        self.get_printed_information(years_total, terms_total_readable, terms_total_number, terms_payment,
-                                     terms_plural_singular, years_plural_singular)
+        self.get_printed_information(years_total, terms_total_readable, terms_total_number, terms_payment, terms_plural_singular, years_plural_singular)
+
 
     def get_amount_total(self):
         while True:
@@ -188,6 +199,7 @@ class MortgageCalculator():
             else:
                 print("Your input is not valid, please try again\n")
                 continue
+
 
     def get_years_total(self):
         while True:
@@ -199,6 +211,7 @@ class MortgageCalculator():
                 print("Your input is not valid, please try again\n")
                 continue
 
+
     def get_terms_year(self):
         terms_dict = {
             "yearly": 1,
@@ -207,6 +220,7 @@ class MortgageCalculator():
             "daily": 365,
         }
         return terms_dict
+
 
     def get_terms_total(self, years_total, terms_year):
         while True:
@@ -225,6 +239,7 @@ class MortgageCalculator():
             else:
                 print("Your input is not valid, please try again\n")
                 continue
+
 
     def get_terms_payment(self, interest_usable, terms_year, terms_total_readable, terms_total_number):
         amount_total = float(self.amount_total)
@@ -250,6 +265,7 @@ class MortgageCalculator():
         terms_payment = "{:.2f}".format(math.ceil(terms_payment*20)/20)
         return terms_payment
 
+
     def get_terms_dict(self):
         terms_dict = {
             "yearly": {
@@ -271,13 +287,16 @@ class MortgageCalculator():
         }
         return terms_dict
 
+
     def get_terms_plural_singular(self, terms_total_readable, terms_total_number, terms_dict):
         t = terms_dict[terms_total_readable]
         return t["plural"] if int(terms_total_number) > 1 else t["singular"]
 
+
     def get_years_plural_singular(self, terms_total_number, terms_dict):
         y = terms_dict["yearly"]
         return y["plural"] if int(terms_total_number) > 1 else y["singular"]
+
 
     def get_printed_information(self, years_total, terms_total_readable, terms_total_number, terms_payment,
                                 terms_plural_singular, years_plural_singular):
@@ -305,7 +324,8 @@ c =rP(1 + r)N(1 + r)N- 1
 
 With r being the monthly interest rate (expressed as a decimal), N is the number of monthly payments (loan’s term), P is the total mortgage, and c is the monthly payment.
 
-What took most of my time and energy, was understanding this formula completely. I have the problem that I cannot go on with my work, until I understand every single thing. I tried to get over it and move on, but whenever I tried, my mind wandered off, back to this formula and how the heck this works. Most of it, I do understand, but the complete picture, I do not. 
+What took most of my time and energy, was understanding this formula completely. I have the problem that I cannot go on with my work, until I understand every single thing. I tried to get over it and move on, but whenever I tried, my mind wandered off, back to this formula and how the heck this works. Most of it, I do understand, but the complete picture, I do not.
+
 What I found on the internet is the following:
 Amount owed at initiation: P
 Amount owed after 1 month: (1 + r) P − c
@@ -326,15 +346,19 @@ And this last step, that is where I got lost. I spent so many hours figuring out
 
 However, while writing this blog this feeling of unfulfillment and frustration is coming up again: How on earth does this formula exactly work?! If anyone knows, feel free to contact me and help me out leaving this behind me once and forever.
 
+Below, the code of the mortgage calculator using the official formula.
+
 ```py
 import math
 
 class MortgageCalculator():
 
+
     def __init__(self, interest):
         self.amount_total = self.get_amount_total()
         self.interest = interest
         self.start()
+
 
     def start(self):
         years_total = self.get_years_total()
@@ -353,6 +377,7 @@ class MortgageCalculator():
         self.get_printed_information(years_total, terms_total_readable, terms_total_number, payment_per_term,
                                      terms_plural_singular, years_plural_singular)
 
+
     def get_amount_total(self):
         while True:
             amount_total = input("What is the amount of mortgage in euros?")
@@ -361,6 +386,7 @@ class MortgageCalculator():
             else:
                 print("Your input is not valid, please try again\n")
                 continue
+
 
     def get_years_total(self):
         while True:
@@ -372,6 +398,7 @@ class MortgageCalculator():
                 print("Your input is not valid, please try again\n")
                 continue
 
+
     def get_terms_year(self):
         terms_dict = {
             "yearly": 1,
@@ -380,6 +407,7 @@ class MortgageCalculator():
             "daily": 365,
         }
         return terms_dict
+
 
     def get_terms_total(self, years_total, terms_year):
         while True:
@@ -399,6 +427,7 @@ class MortgageCalculator():
                 print("Your input is not valid, please try again\n")
                 continue
 
+
     def get_payment_per_term(self, years_total, months_total, terms_total_number):
         interest_usable = self.interest/100/12
         monthly_payment = interest_usable / \
@@ -409,6 +438,7 @@ class MortgageCalculator():
             int(terms_total_number)
 
         return float(payment_per_term)
+
 
     def get_terms_dict(self):
         terms_dict = {
@@ -431,13 +461,16 @@ class MortgageCalculator():
         }
         return terms_dict
 
+
     def get_terms_plural_singular(self, terms_total_readable, terms_total_number, terms_dict):
         t = terms_dict[terms_total_readable]
         return t["plural"] if int(terms_total_number) > 1 else t["singular"]
 
+
     def get_years_plural_singular(self, terms_total_number, terms_dict):
         y = terms_dict["yearly"]
         return y["plural"] if int(terms_total_number) > 1 else y["singular"]
+
 
     def get_printed_information(self, years_total, terms_total_readable, terms_total_number, payment_per_term,
                                 terms_plural_singular, years_plural_singular):
@@ -461,6 +494,7 @@ class MortgageCalculator():
             f"Period: {terms_total_number} {terms_plural_singular}")
         print(
             f"\nYou will have to pay €{payment_per_term} {terms_total_readable} for {terms_total_number} {terms_plural_singular}.")
+
 
 MortgageCalculator(5.2)
 ```
