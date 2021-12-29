@@ -9,15 +9,15 @@ const Avatar: React.FC<Props> = () => {
       <Image
         src="/marlies-gish.jpg"
         alt="Picture of the author"
-        width={48}
-        height={48}
+        width={100}
+        height={100}
       />
       <style jsx>{`
         .avatar {
-          height: 48px;
-          width: 48px;
+          height: 100px;
+          width: 100px;
           overflow: hidden;
-          border-radius: 24px;
+          border-radius: 60px;
           border: 3px solid #228e42;
         }
       `}</style>

@@ -1,6 +1,6 @@
 ---
 title: "Mortgage calculator, step by step"
-excerpt: "During my journey into getting to know Python, I have done lots of small projects to practice my python skills. I thought it might be fun to show how I made my way through the exercise to write"
+excerpt: "During my journey into getting to know Python, I have done lots of small projects to practice my python skills. I thought it might be fun to show how I made my way through the exercise to"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-04-03"
 ogImage:

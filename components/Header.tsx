@@ -43,6 +43,9 @@ const Header: React.FC<Props> = () => (
             <PrimaryButton href="/resume" type="light">
               Resume
             </PrimaryButton>
+            <PrimaryButton href="mailto:me@marliesgish.com" type="light">
+              Contact
+            </PrimaryButton>
           </nav>
         </div>
       </ConstraintWidth>

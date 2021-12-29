@@ -7,7 +7,11 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-My love for statistics started way back. In the days when they called it Mathematics. Of course, I am talking about my time in high school. Physics and Mathematics were the two topics that gave me some meaning to my school life and actually motivated me to attend school. I loved learning about the formulas in physics that explained those daily events in life which before I had had no clue about. For instance, the simplistic beauty of gravity was an eye opener for me. Also, the intricate ways that eyes work, how positive and negative lenses can improve vision. Or using my hands and building small tools using wind energy. My favorite math subject was geometry: calculating the volume of certain shapes, given some formulas which could be represented in a graph. How fun to crack my brains and discover on my own the one and only solution! After high school, my broad journey through the wonderful world of statistics became more specific. It was not so much geometry anymore, but more hard core statistics. During my Bachelor program, we started out with the following basics:
+My love for statistics started way back. In the days when they called it Mathematics. Of course, I am talking about my time in high school. Physics and Mathematics were the two topics that gave me some meaning to my school life and actually motivated me to attend school. I loved learning about the formulas in physics that explained those daily events in life which before I had had no clue about. For instance, the simplistic beauty of gravity was an eye opener for me. Also, the intricate ways that eyes work, how positive and negative lenses can improve vision. Or using my hands and building small tools using wind energy. My favorite math subject was geometry: calculating the volume of certain shapes, given some formulas which could be represented in a graph. How fun to crack my brains and discover on my own the one and only solution!
+
+> This was the perfect opportunity to combine the interesting parts of Psychology and using statistics as a tool to explore possible explanations for seemingly erratic human behavior.
+
+After high school, my broad journey through the wonderful world of statistics became more specific. It was not so much geometry anymore, but more hard core statistics. During my Bachelor program, we started out with the following basics:
 
 - Reliability and Validity
 - T and z-values
