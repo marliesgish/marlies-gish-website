@@ -1,6 +1,6 @@
 ---
 title: "Recap, now and then"
-excerpt: "It’s been a while since updating my website. What progress have I made in the world of Data Science?"
+excerpt: "What progress have I made in the world of Data Science? Well, first of all I started an official retraining program at the Amsterdam University of Applied Sciences, called Business and"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2021-08-03"
 ogImage:

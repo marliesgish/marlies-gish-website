@@ -25,7 +25,7 @@ const Index = ({ posts = [] }) => {
           <ConstraintWidth
             maxWidth={CONSTANTS.pageWidth - 2 * CONSTANTS.sidePadding}
           >
-            <ConstraintWidth maxWidth={560}>
+            <ConstraintWidth maxWidth={580}>
               <Masthead
                 center
                 headline="Diving into the world of Data Science"

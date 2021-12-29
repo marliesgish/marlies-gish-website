@@ -30,7 +30,8 @@ const PostPreview: React.FC<Props> = ({
     </div>
     <div className="excerpt">
       <Paragraph small={small}>
-        {excerpt}{" "}
+        {excerpt} ...
+        <br />
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
           <a className="read-more">Read more</a>
         </Link>
@@ -47,7 +48,7 @@ const PostPreview: React.FC<Props> = ({
 
       .excerpt {
         margin-top: 0;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5em;--+
       }
 
       .read-more {

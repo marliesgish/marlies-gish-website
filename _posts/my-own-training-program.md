@@ -1,6 +1,6 @@
 ---
 title: "My own training program"
-excerpt: "Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed."
+excerpt: "Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed. Using this tool to visualize the world around me keeps me flying"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-02-19"
 ogImage:
@@ -15,7 +15,6 @@ The funny thing is, I loved PE, but not in the way it was taught in high school.
 Nowadays our culture demands so much not only of children, but of grown-ups as well. You must follow a fairly strict regimen, study a broad range of subjects, while only 10% sticks, in the end the 10% that really matters. Having fun, knowing your skills, your strengths and weaknesses, that is what is valuable. When unleashing yourself from the bounds of society and following your heart, it is amazing how each person has the capacity to create their own program. The potential to achieve goals you would want to attain, learning to make a better version of yourself and expanding your knowledge above and beyond what is expected of you.
 
 The conclusion to all of this is that I am happiest when I can do what I enjoy most. When something feels useful, I want to know all about it and want to learn as much as possible. So this is what I did, using Statistics and Psychology as a solid foundation, setting new goals to learn more and more about Data Science. Having left the starting blocks, I am learning more about programming in Python and the race is picking up speed. Using this tool to visualize the world around me keeps me flying.
-
 
 Book: Python Crash Course by [Eric Matthes](https://twitter.com/ehmatthes?lang=en)
 I started out with a book that I got as a present. This book has helped me so much in becoming more excited about all the possibilities that Python offers. The book consists of 2 parts, the first part focuses on Python in general. The basic stuff like lists, dictionaries, functions, classes, all you need to know to make code snippets and small programs. The second part is the fun part. It consists of three main projects with some small side projects and practices.

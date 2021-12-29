@@ -39,7 +39,7 @@ const Resume = ({ allPosts }) => {
           </div>
           <ResumeItem
             position="Data Engineer"
-            company="Belastingdient"
+            company="Belastingdienst"
             location="Utrecht"
             website="https://www.belastingdienst.nl"
             date="Oct '21 - Present"

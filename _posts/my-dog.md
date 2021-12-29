@@ -1,6 +1,6 @@
 ---
 title: "My dog"
-excerpt: "Besides programming, python, and pushing my brains to its limit, I also have another hobby. My Jack Russell Terrier."
+excerpt: "Besides programming, python, and pushing my brains to its limit, I also have another hobby. My Jack Russell Terrier. I adopted him five years ago and he is over 15 years old now.  His name is"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2021-08-01"
 ogImage:
