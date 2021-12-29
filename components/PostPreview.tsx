@@ -22,26 +22,23 @@ const PostPreview: React.FC<Props> = ({
   small,
 }) => (
   <article className="article">
-    <H3 style={{ marginBottom: "0.3em" }}>
-      <Link as={`/blog/${slug}`} href="/blog/[slug]" passHref>
-        <a className="title">{title}</a>
-      </Link>
-    </H3>
+    <H3 style={{ marginBottom: "0.3em", fontWeight: 500 }}>{title}</H3>
     <div className="date">
       <Date>
         <DateFormatter dateString={date} />
       </Date>
     </div>
     <div className="excerpt">
-      <Paragraph small={small}>{excerpt}</Paragraph>
+      <Paragraph small={small}>
+        {excerpt}{" "}
+        <Link as={`/blog/${slug}`} href="/blog/[slug]">
+          <a className="read-more">Read more</a>
+        </Link>
+      </Paragraph>
     </div>
     <style jsx>{`
       .article + .article {
         margin-top: 50px;
-      }
-
-      .title {
-        font-weight: 500;
       }
 
       .date {
@@ -51,6 +48,10 @@ const PostPreview: React.FC<Props> = ({
       .excerpt {
         margin-top: 0;
         margin-bottom: 0.5em;
+      }
+
+      .read-more {
+        white-space: nowrap;
       }
     `}</style>
   </article>
